@@ -1,0 +1,954 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Personal portfolio of a UI/UX designer and front-end enthusiast." />
+
+  <title>Personal Portfolio</title>
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+
+  <link rel="apple-touch-icon" sizes="196x196" href="favicon-196x196.png" />
+  <link rel="apple-touch-icon" sizes="196x196" href="favicon-128x128.png" />
+  <link rel="manifest" href="assets/site.webmanifest">
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: "#fff7ed",
+              100: "#ffedd5",
+              200: "#fed7aa",
+              300: "#fdba74",
+              400: "#fb923c",
+              500: "#f97316",
+              600: "#ea580c",
+              700: "#c2410c",
+              800: "#9a3412",
+              900: "#7c2d12",
+            },
+          },
+
+          fontFamily: {
+            heading: ["Freeman", "sans-serif"],
+            body: ["Poppins", "sans-serif"],
+          },
+
+          boxShadow: {
+            soft: "0 10px 35px rgba(15, 23, 42, 0.08)",
+            float: "0 20px 45px rgba(249, 115, 22, 0.18)",
+          },
+
+          animation: {
+            floaty: "floaty 5s ease-in-out infinite",
+            marquee: "marquee 25s linear infinite",
+          },
+
+          keyframes: {
+            floaty: {
+              "0%, 100%": { transform: "translateY(0px)" },
+              "50%": { transform: "translateY(-10px)" },
+            },
+
+            marquee: {
+              "0%": { transform: "translateX(-50%)" },
+              "100%": { transform: "translateX(0%)" },
+            },
+          },
+        },
+      },
+    };
+  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link href="https://fonts.googleapis.com/css2?family=Freeman&family=Poppins:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+
+  <!-- Global Styles -->
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+    }
+
+    h1,
+    h2 {
+      font-family: "Freeman", sans-serif;
+      letter-spacing: 0.5px;
+    }
+
+    .grid-bg {
+      background-image:
+        linear-gradient(to right,
+          rgba(148, 163, 184, 0.08) 1px,
+          transparent 1px),
+        linear-gradient(to bottom,
+          rgba(148, 163, 184, 0.08) 1px,
+          transparent 1px);
+
+      background-size: 32px 32px;
+    }
+  </style>
+</head>
+
+<body class="bg-white text-slate-900 antialiased">
+  <!-- Skip link -->
+  <a href="#main"
+    class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:rounded-full focus:bg-white focus:px-4 focus:py-2 focus:shadow-lg">
+    Skip to content
+  </a>
+
+  <!-- ─── Header ──────────────────────────────────────────────────────── -->
+  <header class="sticky top-0 z-40 border-b border-slate-200/70 bg-stone-50/90 backdrop-blur-xl">
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-10">
+      <a href="#home"
+        class="flex items-center gap-2 text-lg font-extrabold tracking-tight transition hover:text-brand-600">
+        <img src="logo.png" alt="NC Logo" class="h-8 w-auto object-contain" />
+      </a>
+
+      <nav class="hidden items-center gap-8 text-sm font-medium md:flex">
+        <a href="#home" class="text-brand-600 underline decoration-brand-500 underline-offset-8">Home</a>
+        <a href="#about" class="transition hover:text-brand-600">About</a>
+        <a href="#projects" class="transition hover:text-brand-600">Projects</a>
+        <a href="#skills" class="transition hover:text-brand-600">Skills</a>
+        <a href="#contact" class="transition hover:text-brand-600">Contact</a>
+      </nav>
+
+      <a href="uix_resume.pdf"
+        class="group inline-flex items-center gap-2 rounded-full bg-brand-500 px-6 py-3 text-sm font-semibold text-white shadow-float transition duration-300 hover:-translate-y-1 hover:bg-brand-600">
+        Resume
+        <span class="transition group-hover:translate-x-1">↗</span>
+      </a>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ─── Hero ─────────────────────────────────────────────────────── -->
+    <section id="home" class="grid-bg overflow-hidden">
+      <div class="mx-auto grid min-h-[92vh] max-w-7xl items-center gap-14 px-6 py-16 lg:grid-cols-2 lg:px-10 lg:py-12">
+        <div>
+          <h1 class="mt-6 max-w-xl text-4xl font-extrabold leading-tight sm:text-5xl lg:text-6xl">
+            Hi, I'm <span class="text-brand-600">Nitya</span>
+          </h1>
+
+          <p class="mt-4 text-lg font-medium text-slate-600">
+            UI/UX Designer | Frontend Enthusiast
+          </p>
+
+          <p class="mt-6 max-w-xl text-base leading-8 text-slate-600 sm:text-lg">
+            I create clean, user-focused interfaces that combine usability,
+            aesthetics, and seamless interaction across web and mobile
+            platforms.
+          </p>
+
+          <div class="mt-8 flex flex-wrap gap-4">
+            <a href="uix_resume.pdf"
+              class="group inline-flex items-center gap-2 rounded-full bg-brand-500 px-6 py-3 text-sm font-semibold text-white shadow-float transition duration-300 hover:-translate-y-1 hover:bg-brand-600">
+              Resume
+              <span class="transition group-hover:translate-x-1">↗</span>
+            </a>
+            <a href="#projects"
+              class="group inline-flex items-center gap-2 rounded-full border border-slate-300 bg-white px-6 py-3 text-sm font-semibold text-slate-700 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-slate-400 hover:shadow-soft">
+              View Work
+              <span class="transition group-hover:translate-x-1">→</span>
+            </a>
+          </div>
+
+          <div class="mt-8 flex items-center gap-4">
+            <!-- Behance -->
+            <a href="https://www.behance.net/anshichaurasia" aria-label="Behance"
+              class="flex h-12 w-12 items-center justify-center rounded-xl border border-slate-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:border-orange-300 hover:shadow-lg">
+              <img src="behance.png" alt="Behance" class="h-5 w-5 object-contain" />
+            </a>
+
+            <!-- LinkedIn -->
+            <a href="https://www.linkedin.com/in/nitya-chaurasiya-892549230/" aria-label="LinkedIn"
+              class="flex h-12 w-12 items-center justify-center rounded-xl border border-slate-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:border-orange-300 hover:shadow-lg">
+              <img src="linkedin.png" alt="LinkedIn" class="h-5 w-5 object-contain" />
+            </a>
+
+            <!-- Email -->
+            <a href="mailto:anshichaurasia04@gmail.com" aria-label="Email"
+              class="flex h-12 w-12 items-center justify-center rounded-xl border border-slate-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:border-orange-300 hover:shadow-lg">
+              <img src="gmail.svg" alt="Email" class="h-5 w-5 object-contain" />
+            </a>
+          </div>
+        </div>
+
+        <div class="relative flex w-full items-center justify-center">
+          <div class="absolute h-[400px] w-[400px] rounded-full bg-brand-200 opacity-50 blur-3xl"></div>
+          <!-- <div
+              class="absolute h-[420px] w-[420px] rounded-full bg-brand-100"
+            ></div> -->
+          <img src="hero.png" alt="Profile photo of Nitya"
+            class="relative z-10 w-full max-w-[327px] animate-floaty object-contain" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── Marquee ────────────────────────────────────────────────────── -->
+    <section class="relative overflow-hidden py-8">
+      <!-- Orange Glow -->
+      <div class="absolute inset-0 bg-orange-400/20 blur-3xl"></div>
+
+      <!-- Marquee Strip -->
+      <div
+        class="relative rotate-[1.5deg] overflow-hidden border-y border-orange-200 bg-orange-500/95 py-3 shadow-lg backdrop-blur-xl">
+        <div
+          class="flex animate-marquee whitespace-nowrap text-sm font-semibold uppercase tracking-[0.18em] text-white sm:text-base">
+          <span class="mx-8">Website Design</span>
+          <span class="opacity-60">✦</span>
+
+          <span class="mx-8">Landing Pages</span>
+          <span class="opacity-60">✦</span>
+
+          <span class="mx-8">Dashboards</span>
+          <span class="opacity-60">✦</span>
+
+          <span class="mx-8">SaaS Product UI</span>
+          <span class="opacity-60">✦</span>
+
+          <span class="mx-8">Portfolio Websites</span>
+          <span class="opacity-60">✦</span>
+
+          <span class="mx-8">Onboarding Screens</span>
+          <span class="opacity-60">✦</span>
+
+          <span class="mx-8">CRM Interfaces</span>
+          <span class="opacity-60">✦</span>
+
+          <span class="mx-8">UX Design</span>
+          <span class="opacity-60">✦</span>
+
+          <span class="mx-8">App Design</span>
+          <span class="opacity-60">✦</span>
+
+          <!-- Duplicate for smooth loop -->
+
+          <span class="mx-8">Website Design</span>
+          <span class="opacity-60">✦</span>
+
+          <span class="mx-8">Landing Pages</span>
+          <span class="opacity-60">✦</span>
+
+          <span class="mx-8">Dashboards</span>
+          <span class="opacity-60">✦</span>
+
+          <span class="mx-8">SaaS Product UI</span>
+          <span class="opacity-60">✦</span>
+
+          <span class="mx-8">Portfolio Websites</span>
+          <span class="opacity-60">✦</span>
+
+          <span class="mx-8">Onboarding Screens</span>
+          <span class="opacity-60">✦</span>
+
+          <span class="mx-8">CRM Interfaces</span>
+          <span class="opacity-60">✦</span>
+
+          <span class="mx-8">UX Design</span>
+          <span class="opacity-60">✦</span>
+
+          <span class="mx-8">App Design</span>
+          <span class="opacity-60">✦</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── About ─────────────────────────────────────────────────────── -->
+    <section id="about" class="bg-[#ffffff] px-6 py-24 lg:px-10">
+      <div class="mx-auto max-w-7xl">
+        <div class="mx-auto max-w-3xl">
+          <div class="text-center">
+            <span class="text-xs font-semibold uppercase tracking-[0.2em] text-orange-500">
+              About Me
+            </span>
+            <h2 class="mt-3 text-3xl font-extrabold text-slate-900 md:text-4xl">
+              Passionate About Creating Meaningful Experiences
+            </h2>
+          </div>
+        </div>
+
+        <!-- Skill cards -->
+        <div class="mt-14 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+          <article
+            class="group rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-orange-300 hover:shadow-lg">
+            <div
+              class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl transition-transform duration-300 group-hover:scale-110">
+              <img src="visual.svg" alt="Icon" class="h-12 w-12 object-contain" />
+            </div>
+            <h3 class="font-semibold text-slate-800">Visual Design</h3>
+            <p class="mt-2 text-sm leading-6 text-slate-500">
+              Crafting modern interfaces with strong attention to typography,
+              color, and layout.
+            </p>
+          </article>
+
+          <article
+            class="group rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-orange-300 hover:shadow-lg">
+            <div
+              class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl transition-transform duration-300 group-hover:scale-110">
+              <img src="responsive.svg" alt="Icon" class="h-12 w-12 object-contain" />
+            </div>
+
+            <h3 class="font-semibold text-slate-800">Responsive Design</h3>
+
+            <p class="mt-2 text-sm leading-6 text-slate-500">
+              Creating seamless experiences across desktop, tablet, and mobile
+              devices.
+            </p>
+          </article>
+
+          <article
+            class="group rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-orange-300 hover:shadow-lg">
+            <div
+              class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl transition-transform duration-300 group-hover:scale-110">
+              <img src="prototype.svg" alt="Icon" class="h-12 w-12 object-contain" />
+            </div>
+            <h3 class="font-semibold text-slate-800">Prototyping</h3>
+            <p class="mt-2 text-sm leading-6 text-slate-500">
+              Building interactive prototypes to validate ideas and iterate
+              quickly.
+            </p>
+          </article>
+
+          <article
+            class="group rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-orange-300 hover:shadow-lg">
+            <div
+              class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl transition-transform duration-300 group-hover:scale-110">
+              <img src="collab.svg" alt="Icon" class="h-12 w-12 object-contain" />
+            </div>
+            <h3 class="font-semibold text-slate-800">Collaboration</h3>
+            <p class="mt-2 text-sm leading-6 text-slate-500">
+              Collaborating with teams to turn ideas into real-world products.
+            </p>
+          </article>
+        </div>
+
+        <!-- Journey + Quick Facts -->
+        <div class="mt-16 grid gap-6 lg:grid-cols-[1.6fr_.8fr]">
+          <div class="rounded-3xl border border-brand-100 bg-brand-50/50 p-8 shadow-sm transition hover:shadow-md">
+            <span
+              class="inline-flex rounded-full bg-brand-100 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-brand-600">
+              About Me
+            </span>
+
+            <h3 class="mt-4 text-3xl font-heading text-slate-900">
+              Designing Digital Experiences That Make an Impact
+            </h3>
+
+            <p class="mt-4 leading-7 text-slate-600">
+              I'm a UI/UX Designer with 1+ years of experience creating intuitive,
+              user-centered digital products for startups and businesses. I enjoy turning
+              complex ideas into clean, scalable, and meaningful user experiences.
+            </p>
+
+            <div class="mt-8">
+              <h4 class="text-lg font-semibold text-slate-900">What I Do</h4>
+
+              <div class="mt-4 grid gap-3 sm:grid-cols-2">
+                <div class="flex items-start gap-3">
+                  <span class="text-brand-500">✓</span>
+                  <p class="text-slate-600">User Research & UX Strategy</p>
+                </div>
+
+                <div class="flex items-start gap-3">
+                  <span class="text-brand-500">✓</span>
+                  <p class="text-slate-600">Wireframing & Prototyping</p>
+                </div>
+
+                <div class="flex items-start gap-3">
+                  <span class="text-brand-500">✓</span>
+                  <p class="text-slate-600">Design Systems & Components</p>
+                </div>
+
+                <div class="flex items-start gap-3">
+                  <span class="text-brand-500">✓</span>
+                  <p class="text-slate-600">Responsive Web & Mobile Design</p>
+                </div>
+
+                <div class="flex items-start gap-3">
+                  <span class="text-brand-500">✓</span>
+                  <p class="text-slate-600">Dashboard & SaaS Product Design</p>
+                </div>
+
+                <div class="flex items-start gap-3">
+                  <span class="text-brand-500">✓</span>
+                  <p class="text-slate-600">Developer-Friendly UI Handoff</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-8 rounded-2xl border border-brand-100 bg-white p-5">
+              <h4 class="font-semibold text-slate-900">My Design Philosophy</h4>
+
+              <p class="mt-3 leading-7 text-slate-600">
+                Great design is more than aesthetics. I believe every interface should
+                solve real user problems through research, collaboration, iteration, and
+                thoughtful design decisions that balance business goals with user needs.
+              </p>
+            </div>
+          </div>
+
+          <aside
+            class="group relative overflow-hidden rounded-3xl bg-slate-950 p-6 text-white shadow-xl transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl">
+            <div
+              class="absolute inset-0 bg-gradient-to-br from-brand-500/10 to-transparent opacity-0 transition group-hover:opacity-100">
+            </div>
+
+            <div class="relative z-10">
+              <h3 class="text-lg font-semibold tracking-wide">Quick Facts</h3>
+
+              <div class="mt-6 space-y-5 text-sm">
+
+                <div class="flex justify-between border-b border-white/10 pb-4">
+                  <div>
+                    <p class="text-xs uppercase tracking-wider text-brand-400">
+                      Current Role
+                    </p>
+                    <p class="mt-1 font-semibold">
+                      UI/UX Designer
+                    </p>
+                  </div>
+
+                  <span class="text-brand-500">👨‍💻</span>
+                </div>
+
+                <div class="flex justify-between border-b border-white/10 pb-4">
+                  <div>
+                    <p class="text-xs uppercase tracking-wider text-brand-400">
+                      Company
+                    </p>
+                    <p class="mt-1 font-semibold">
+                      ToTheByte Technologies
+                    </p>
+                  </div>
+
+                  <span class="text-brand-500">🏢</span>
+                </div>
+
+                <div class="flex justify-between border-b border-white/10 pb-4">
+                  <div>
+                    <p class="text-xs uppercase tracking-wider text-brand-400">
+                      Experience
+                    </p>
+                    <p class="mt-1 font-semibold">
+                      1+ Years
+                    </p>
+                  </div>
+
+                  <span class="text-brand-500">📅</span>
+                </div>
+              </div>
+
+              <div
+                class="mt-7 rounded-2xl bg-gradient-to-r from-brand-500 to-brand-600 p-5 shadow-md transition-all duration-300 group-hover:scale-[1.02]">
+                <h4 class="text-lg font-semibold text-white">
+                  Have a Project in Mind?
+                </h4>
+
+                <p class="mt-2 text-sm leading-relaxed text-brand-100">
+                  I'm always open to collaborating on meaningful digital products, startup
+                  ideas, and user-focused experiences.
+                </p>
+
+                <a href="#contact"
+                  class="mt-5 inline-flex w-full items-center justify-center rounded-xl bg-white px-5 py-3 font-semibold text-brand-600 transition hover:bg-brand-50">
+                  Let's Connect →
+                </a>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── Projects ──────────────────────────────────────────────────── -->
+    <section id="projects" class="bg-stone-100/20 px-6 py-20 lg:px-10">
+      <div class="mx-auto max-w-7xl">
+        <div class="mx-auto max-w-3xl">
+          <div class="text-center">
+            <span class="text-xs font-semibold uppercase tracking-[0.2em] text-orange-500">
+              My Work
+            </span>
+
+            <h2 class="mt-3 text-3xl font-extrabold text-slate-900 md:text-4xl">
+              Featured Projects
+            </h2>
+          </div>
+        </div>
+
+        <div class="mt-12 grid gap-6 md:grid-cols-2">
+          <article
+            class="group overflow-hidden rounded-[2rem] border border-slate-200 bg-white shadow-sm transition duration-300 hover:-translate-y-2 hover:border-orange-300 hover:shadow-soft">
+            <div class="overflow-hidden">
+              <img src="kyc-cover.png" alt="FinTech app project preview" width="900" height="650" loading="lazy"
+                class="h-72 w-full object-cover transition duration-500 group-hover:scale-105" />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold">Identity Verification Platform</h3>
+              <p class="mt-3 text-sm leading-7 text-slate-600">
+                Designed a secure identity verification platform that streamlines customer onboarding, KYC/KYB checks,
+                and compliance workflows through an intuitive and scalable user experience.
+              </p>
+              <div class="mt-4 flex flex-wrap gap-2 text-xs font-medium text-slate-500">
+                <span class="rounded-full bg-slate-100 px-3 py-1">Web</span>
+                <span class="rounded-full bg-slate-100 px-3 py-1">FinTech</span>
+                <span class="rounded-full bg-slate-100 px-3 py-1">Compliance</span>
+                <span class="rounded-full bg-slate-100 px-3 py-1">Figma</span>
+              </div>
+              <div class="mt-5 flex gap-3">
+                <a href="#"
+                  class="rounded-full bg-brand-500 px-4 py-2 text-xs font-semibold text-white transition hover:bg-brand-600">Case
+                  Study</a>
+                <a href="https://www.figma.com/design/TWl2oKrggP8i4hYIpQtfHs/kycconnect.ai?node-id=0-1&t=BeEGl6o5MycgS1db-1"
+                  class="rounded-full border border-slate-300 px-4 py-2 text-xs font-semibold text-slate-700 transition hover:border-slate-400  hover:bg-slate-50">Figma
+                  File</a>
+              </div>
+            </div>
+          </article>
+
+          <article
+            class="group overflow-hidden rounded-[2rem] border border-slate-200 bg-white shadow-sm transition duration-300 hover:-translate-y-2 hover:border-orange-300 hover:shadow-soft">
+            <div class="overflow-hidden">
+              <img src="p-t-cover.png" alt="Healthcare dashboard preview" width="900" height="650" loading="lazy"
+                class="h-72 w-full object-cover transition duration-500 group-hover:scale-105" />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold">Talent Acquisition Platform</h3>
+              <p class="mt-3 text-sm leading-7 text-slate-600">
+                A recruitment platform designed to help businesses discover, evaluate, and hire qualified professionals
+                through a streamlined and responsive user experience.
+              </p>
+              <div class="mt-4 flex flex-wrap gap-2 text-xs font-medium text-slate-500">
+                <span class="rounded-full bg-slate-100 px-3 py-1">Web</span>
+                <span class="rounded-full bg-slate-100 px-3 py-1">Recruitment</span>
+              </div>
+              <div class="mt-5 flex gap-3">
+                <a href="#"
+                  class="rounded-full bg-brand-500 px-4 py-2 text-xs font-semibold text-white transition hover:bg-brand-600">Case
+                  Study</a>
+                <a href="https://www.figma.com/design/VdCVX2t2YAcQiylSBkKYrS/2projects?node-id=18-13395&t=dF2Ns4zSsBKIKvWb-1"
+                  class="rounded-full border border-slate-300 px-4 py-2 text-xs font-semibold text-slate-700 transition hover:border-slate-400  hover:bg-slate-50">Figma
+                  File</a>
+              </div>
+            </div>
+          </article>
+
+          <article
+            class="group overflow-hidden rounded-[2rem] border border-slate-200 bg-white shadow-sm transition duration-300 hover:-translate-y-2 hover:border-orange-300 hover:shadow-soft">
+            <div class="overflow-hidden">
+              <img src="b-c-cover.png" alt="E-learning platform preview" width="900" height="650" loading="lazy"
+                class="h-72 w-full object-cover transition duration-500 group-hover:scale-105" />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold">Construction Compliance AI Platform</h3>
+              <p class="mt-3 text-sm leading-7 text-slate-600">
+                Designed an AI-powered platform that helps construction teams navigate building codes, zoning
+                regulations, permits, and compliance requirements through an intelligent conversational interface and
+                project-based workflow system.
+              </p>
+              <div class="mt-4 flex flex-wrap gap-2 text-xs font-medium text-slate-500">
+                <span class="rounded-full bg-slate-100 px-3 py-1">Web</span>
+                <span class="rounded-full bg-slate-100 px-3 py-1">Construction Tech</span>
+                <span class="rounded-full bg-slate-100 px-3 py-1">AI Assistant</span>
+                <span class="rounded-full bg-slate-100 px-3 py-1">Compliance</span>
+              </div>
+              <div class="mt-5 flex gap-3">
+                <a href="https://www.behance.net/gallery/251855663/ByteConstruct-AI-End-to-End-UXUI-Design-Case-Study"
+                  class="rounded-full bg-brand-500 px-4 py-2 text-xs font-semibold text-white transition hover:bg-brand-600">Case
+                  Study</a>
+                <a href="https://www.figma.com/design/VdCVX2t2YAcQiylSBkKYrS/2projects?node-id=0-1&t=dF2Ns4zSsBKIKvWb-1"
+                  class="rounded-full border border-slate-300 px-4 py-2 text-xs font-semibold text-slate-700 transition hover:border-slate-400 hover:bg-slate-50">Figma
+                  File</a>
+              </div>
+            </div>
+          </article>
+
+          <article
+            class="group overflow-hidden rounded-[2rem] border border-slate-200 bg-white shadow-sm transition duration-300 hover:-translate-y-2 hover:border-orange-300 hover:shadow-soft">
+            <div class="overflow-hidden">
+              <img src="t-f-cover.png" alt="SaaS design system preview" width="900" height="650" loading="lazy"
+                class="h-72 w-full object-cover transition duration-500 group-hover:scale-105" />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold">TeamForge – Verified Talent Network</h3>
+              <p class="mt-3 text-sm leading-7 text-slate-600">
+                Designed a managed talent platform that connects businesses with verified professionals through a
+                streamlined hiring experience, enabling companies to discover, evaluate, interview, onboard, and manage
+                dedicated resources while providing ongoing engagement support throughout the project lifecycle.
+              </p>
+              <div class="mt-4 flex flex-wrap gap-2 text-xs font-medium text-slate-500">
+                <span class="rounded-full bg-slate-100 px-3 py-1">Web</span>
+                <span class="rounded-full bg-slate-100 px-3 py-1">SaaS</span>
+                <span class="rounded-full bg-slate-100 px-3 py-1">Corporate Web</span>
+                <span class="rounded-full bg-slate-100 px-3 py-1">Enterprise</span>
+              </div>
+              <div class="mt-5 flex gap-3">
+                <a href="#"
+                  class="rounded-full bg-brand-500 px-4 py-2 text-xs font-semibold text-white transition hover:bg-brand-600">Case
+                  Study</a>
+                <a href="https://www.figma.com/design/NtUcEhpl4t4qdZu9yxBOG0/TeamForge?node-id=0-1&t=hZgHvHrZAYXJsom3-1"
+                  class="rounded-full border border-slate-300 px-4 py-2 text-xs font-semibold text-slate-700 transition hover:border-slate-400 hover:bg-slate-50">Figma
+                  File</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── Skills ────────────────────────────────────────────────────── -->
+    <section id="skills" class="px-6 py-20 lg:px-10">
+      <div class="mx-auto max-w-7xl">
+        <div class="mx-auto max-w-3xl">
+          <div class="text-center">
+            <span class="text-xs font-semibold uppercase tracking-[0.2em] text-orange-500">
+              Skills
+            </span>
+
+            <h2 class="mt-3 text-3xl font-extrabold text-slate-900 md:text-4xl">
+              What I Bring to the Table
+            </h2>
+          </div>
+        </div>
+
+        <div class="mt-10 grid gap-14 lg:grid-cols-[0.85fr_1.15fr]">
+          <!-- Left -->
+          <div class="space-y-10">
+            <div>
+              <p class="text-xs font-bold uppercase tracking-[0.18em] text-brand-500">
+                Let's Connect
+              </p>
+              <div class="mt-5 flex items-center gap-4">
+                <!-- Behance -->
+                <a href="https://www.behance.net/anshichaurasia" aria-label="Behance"
+                  class="flex h-12 w-12 items-center justify-center rounded-xl border border-slate-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:border-orange-300 hover:shadow-lg">
+                  <img src="behance.png" alt="Behance" class="h-5 w-5 object-contain" />
+                </a>
+
+                <!-- LinkedIn -->
+                <a href="https://www.linkedin.com/in/nitya-chaurasiya-892549230/" aria-label="LinkedIn"
+                  class="flex h-12 w-12 items-center justify-center rounded-xl border border-slate-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:border-orange-300 hover:shadow-lg">
+                  <img src="linkedin.png" alt="LinkedIn" class="h-5 w-5 object-contain" />
+                </a>
+
+                <!-- Email -->
+                <a href="mailto:anshichaurasia04@gmail.com" aria-label="Email"
+                  class="flex h-12 w-12 items-center justify-center rounded-xl border border-slate-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:border-orange-300 hover:shadow-lg">
+                  <img src="gmail.svg" alt="Email" class="h-5 w-5 object-contain" />
+                </a>
+              </div>
+            </div>
+            <!-- tools -->
+            <div>
+              <p class="text-xs font-bold uppercase tracking-[0.18em] text-brand-500">
+                Tools I Use
+              </p>
+              <div class="mt-5 flex flex-wrap gap-4">
+                <!-- Figma -->
+                <div
+                  class="flex h-12 w-12 items-center justify-center rounded-xl border border-slate-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:border-orange-300 hover:shadow-md">
+                  <img src="figma.svg" alt="Figma" class="h-6 w-6 object-contain" />
+                </div>
+
+                <!-- canva -->
+                <div
+                  class="flex h-12 w-12 items-center justify-center rounded-xl border border-slate-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:border-orange-300 hover:shadow-md">
+                  <img src="canva.png" alt="canva" class="h-6 w-6 object-contain" />
+                </div>
+
+                <!-- html -->
+                <div
+                  class="flex h-12 w-12 items-center justify-center rounded-xl border border-slate-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:border-orange-300 hover:shadow-md">
+                  <img src="html.png" alt="html" class="h-6 w-6 object-contain" />
+                </div>
+
+                <!-- js -->
+                <div
+                  class="flex h-12 w-12 items-center justify-center rounded-xl border border-slate-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:border-orange-300 hover:shadow-md">
+                  <img src="js.png" alt="js" class="h-6 w-6 object-contain" />
+                </div>
+
+                <!-- Tailwind -->
+                <div
+                  class="flex h-12 w-12 items-center justify-center rounded-xl border border-slate-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:border-orange-300 hover:shadow-md">
+                  <img src="tailwind.png" alt="Tailwind CSS" class="h-6 w-6 object-contain" />
+                </div>
+
+                <!-- reat -->
+                <div
+                  class="flex h-12 w-12 items-center justify-center rounded-xl border border-slate-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:border-orange-300 hover:shadow-md">
+                  <img src="react.png" alt="react" class="h-6 w-6 object-contain" />
+                </div>
+
+                <!-- vs code -->
+                <div
+                  class="flex h-12 w-12 items-center justify-center rounded-xl border border-slate-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:border-orange-300 hover:shadow-md">
+                  <img src="vs.png" alt="VS-code" class="h-6 w-6 object-contain" />
+                </div>
+
+                <!-- github -->
+                <div
+                  class="flex h-12 w-12 items-center justify-center rounded-xl border border-slate-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:border-orange-300 hover:shadow-md">
+                  <img src="github.svg" alt="github" class="h-6 w-6 object-contain" />
+                </div>
+              </div>
+            </div>
+
+            <!-- skills -->
+            <div>
+              <p class="text-xs font-bold uppercase tracking-[0.18em] text-brand-500">
+                Skills
+              </p>
+              <div class="mt-5 flex flex-wrap gap-3">
+                <span
+                  class="rounded-full border border-brand-200 bg-brand-50 px-4 py-2 text-sm font-medium transition duration-300 hover:border-brand-500 hover:bg-brand-500 hover:text-white">UI
+                  Design</span>
+                <span
+                  class="rounded-full border border-brand-200 bg-brand-50 px-4 py-2 text-sm font-medium transition duration-300 hover:border-brand-500 hover:bg-brand-500 hover:text-white">UX
+                  Design</span>
+                <span
+                  class="rounded-full border border-brand-200 bg-brand-50 px-4 py-2 text-sm font-medium transition duration-300 hover:border-brand-500 hover:bg-brand-500 hover:text-white">Prototyping</span>
+                <span
+                  class="rounded-full border border-brand-200 bg-brand-50 px-4 py-2 text-sm font-medium transition duration-300 hover:border-brand-500 hover:bg-brand-500 hover:text-white">Typography
+                  &amp; Color Theory</span>
+                <span
+                  class="rounded-full border border-brand-200 bg-brand-50 px-4 py-2 text-sm font-medium transition duration-300 hover:border-brand-500 hover:bg-brand-500 hover:text-white">Responsive
+                  Design</span>
+                <span
+                  class="rounded-full border border-brand-200 bg-brand-50 px-4 py-2 text-sm font-medium transition duration-300 hover:border-brand-500 hover:bg-brand-500 hover:text-white">Design
+                  Systems</span>
+                <span
+                  class="rounded-full border border-brand-200 bg-brand-50 px-4 py-2 text-sm font-medium transition duration-300 hover:border-brand-500 hover:bg-brand-500 hover:text-white">User
+                  Research</span>
+                <span
+                  class="rounded-full border border-brand-200 bg-brand-50 px-4 py-2 text-sm font-medium transition duration-300 hover:border-brand-500 hover:bg-brand-500 hover:text-white">Problem
+                  Solving</span>
+                <span
+                  class="rounded-full border border-brand-200 bg-brand-50 px-4 py-2 text-sm font-medium transition duration-300 hover:border-brand-500 hover:bg-brand-500 hover:text-white">Creativity</span>
+                <span
+                  class="rounded-full border border-brand-200 bg-brand-50 px-4 py-2 text-sm font-medium transition duration-300 hover:border-brand-500 hover:bg-brand-500 hover:text-white">Frontend
+                  Basics</span>
+                <span
+                  class="rounded-full border border-brand-200 bg-brand-50 px-4 py-2 text-sm font-medium transition duration-300 hover:border-brand-500 hover:bg-brand-500 hover:text-white">Micro
+                  Interactions</span>
+                <span
+                  class="rounded-full border border-brand-200 bg-brand-50 px-4 py-2 text-sm font-medium transition duration-300 hover:border-brand-500 hover:bg-brand-500 hover:text-white">Portfolio
+                  Building</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right -->
+          <div class="space-y-10">
+            <!-- process -->
+            <div>
+              <p class="text-xs font-bold uppercase tracking-[0.18em] text-brand-500">
+                My Design Process
+              </p>
+              <div class="mt-5 grid gap-5 sm:grid-cols-2 xl:grid-cols-4">
+                <div
+                  class="group rounded-3xl border border-slate-200 bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-brand-300 hover:shadow-lg">
+                  <div class="flex items-center gap-3">
+                    <span
+                      class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-100 text-sm font-bold text-brand-500">01</span>
+                    <h3 class="font-bold text-slate-800">Research</h3>
+                  </div>
+                  <p class="mt-4 text-sm leading-6 text-slate-600">
+                    Understanding user needs, business goals, and the problem
+                    space.
+                  </p>
+                </div>
+
+                <div
+                  class="group rounded-3xl border border-slate-200 bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-brand-300 hover:shadow-lg">
+                  <div class="flex items-center gap-3">
+                    <span
+                      class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-100 text-sm font-bold text-brand-500">02</span>
+                    <h3 class="font-bold text-slate-800">Analysis</h3>
+                  </div>
+                  <p class="mt-4 text-sm leading-6 text-slate-600">
+                    Defining flows, pain points, and opportunities with
+                    clarity.
+                  </p>
+                </div>
+
+                <div
+                  class="group rounded-3xl border border-slate-200 bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-brand-300 hover:shadow-lg">
+                  <div class="flex items-center gap-3">
+                    <span
+                      class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-100 text-sm font-bold text-brand-500">03</span>
+                    <h3 class="font-bold text-slate-800">Wireframe</h3>
+                  </div>
+                  <p class="mt-4 text-sm leading-6 text-slate-600">
+                    Structuring layouts and screens before visual design.
+                  </p>
+                </div>
+
+                <div
+                  class="group rounded-3xl border border-slate-200 bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-brand-300 hover:shadow-lg">
+                  <div class="flex items-center gap-3">
+                    <span
+                      class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-100 text-sm font-bold text-brand-500">04</span>
+                    <h3 class="font-bold text-slate-800">UI Design</h3>
+                  </div>
+                  <p class="mt-4 text-sm leading-6 text-slate-600">
+                    Designing clean, user-friendly and visually balanced
+                    interfaces.
+                  </p>
+                </div>
+
+                <div
+                  class="group rounded-3xl border border-slate-200 bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-brand-300 hover:shadow-lg">
+                  <div class="flex items-center gap-3">
+                    <span
+                      class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-100 text-sm font-bold text-brand-500">05</span>
+                    <h3 class="font-bold text-slate-800">Prototype</h3>
+                  </div>
+                  <p class="mt-4 text-sm leading-6 text-slate-600">
+                    Creating interactions from static flows into real
+                    experiences.
+                  </p>
+                </div>
+
+                <div
+                  class="group rounded-3xl border border-slate-200 bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-brand-300 hover:shadow-lg">
+                  <div class="flex items-center gap-3">
+                    <span
+                      class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-100 text-sm font-bold text-brand-500">06</span>
+                    <h3 class="font-bold text-slate-800">Testing</h3>
+                  </div>
+                  <p class="mt-4 text-sm leading-6 text-slate-600">
+                    Measuring usability and identifying improvement areas.
+                  </p>
+                </div>
+
+                <div
+                  class="group rounded-3xl border border-slate-200 bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-brand-300 hover:shadow-lg">
+                  <div class="flex items-center gap-3">
+                    <span
+                      class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-100 text-sm font-bold text-brand-500">07</span>
+                    <h3 class="font-bold text-slate-800">Feedback</h3>
+                  </div>
+                  <p class="mt-4 text-sm leading-6 text-slate-600">
+                    Refining every detail through reviews and stakeholder
+                    input.
+                  </p>
+                </div>
+
+                <div
+                  class="group rounded-3xl border border-slate-200 bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-brand-300 hover:shadow-lg">
+                  <div class="flex items-center gap-3">
+                    <span
+                      class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-100 text-sm font-bold text-brand-500">08</span>
+                    <h3 class="font-bold text-slate-800">Handoff</h3>
+                  </div>
+                  <p class="mt-4 text-sm leading-6 text-slate-600">
+                    Delivering dev-ready assets and documentation for build.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── Contact ───────────────────────────────────────────────────── -->
+    <section id="contact" class="relative overflow-hidden bg-[#ffffff] px-6 pt-20 pb-52 md:pb-20 lg:px-10">
+      <!-- Background Video -->
+      <video autoplay muted loop playsinline
+        class="pointer-events-none absolute bottom-0 left-1/2 z-0 w-44 -translate-x-1/2 opacity-90 md:left-auto md:right-0 md:translate-x-0">
+        <source src="cat.mp4" type="video/mp4" />
+      </video>
+
+      <!-- Content Wrapper -->
+      <div class="relative z-10 mx-auto max-w-6xl">
+        <div class="mx-auto max-w-6xl">
+          <div class="mx-auto max-w-3xl">
+            <div class="text-center">
+              <span class="text-xs font-semibold uppercase tracking-[0.2em] text-orange-500">
+                Contact
+              </span>
+
+              <h2 class="mt-3 text-3xl font-extrabold text-slate-900 md:text-4xl">
+                Let's Start a Conversation
+              </h2>
+            </div>
+          </div>
+
+          <div class="mt-12 grid gap-6 lg:grid-cols-[0.75fr_1.25fr]">
+            <div class="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-sm transition hover:shadow-soft">
+              <p class="text-sm font-semibold text-brand-600">Let's Connect</p>
+              <h3 class="mt-3 text-2xl font-bold">
+                Let's build something meaningful together
+              </h3>
+              <p class="mt-4 text-slate-600">
+                Have a project in mind or just want to chat? I'd love to hear
+                from you.
+              </p>
+              <div class="mt-8 flex gap-3">
+                <!-- Behance -->
+                <a href="https://www.behance.net/anshichaurasia" aria-label="Behance"
+                  class="flex h-12 w-12 items-center justify-center rounded-xl border border-slate-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:border-orange-300 hover:shadow-lg">
+                  <img src="behance.png" alt="Behance" class="h-5 w-5 object-contain" />
+                </a>
+
+                <!-- LinkedIn -->
+                <a href="https://www.linkedin.com/in/nitya-chaurasiya-892549230/" aria-label="LinkedIn"
+                  class="flex h-12 w-12 items-center justify-center rounded-xl border border-slate-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:border-orange-300 hover:shadow-lg">
+                  <img src="linkedin.png" alt="LinkedIn" class="h-5 w-5 object-contain" />
+                </a>
+
+                <!-- Email -->
+                <a href="mailto:anshichaurasia04@gmail.com" aria-label="Email"
+                  class="flex h-12 w-12 items-center justify-center rounded-xl border border-slate-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:border-orange-300 hover:shadow-lg">
+                  <img src="gmail.svg" alt="Email" class="h-5 w-5 object-contain" />
+                </a>
+              </div>
+            </div>
+
+            <form class="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-sm">
+              <div class="grid gap-5 md:grid-cols-2">
+                <div>
+                  <label for="name" class="mb-2 block text-sm font-semibold text-slate-700">Your Name *</label>
+                  <input id="name" type="text" placeholder="John Doe"
+                    class="w-full rounded-2xl border border-slate-200 px-4 py-3 outline-none transition focus:border-brand-500 focus:ring-4 focus:ring-brand-100" />
+                </div>
+                <div>
+                  <label for="email" class="mb-2 block text-sm font-semibold text-slate-700">Your Email *</label>
+                  <input id="email" type="email" placeholder="john@example.com"
+                    class="w-full rounded-2xl border border-slate-200 px-4 py-3 outline-none transition focus:border-brand-500 focus:ring-4 focus:ring-brand-100" />
+                </div>
+              </div>
+              <div class="mt-5">
+                <label for="message" class="mb-2 block text-sm font-semibold text-slate-700">Message *</label>
+                <textarea id="message" rows="5" placeholder="Tell me about your project..."
+                  class="w-full rounded-2xl border border-slate-200 px-4 py-3 outline-none transition focus:border-brand-500 focus:ring-4 focus:ring-brand-100"></textarea>
+              </div>
+              <button type="submit"
+                class="mt-6 inline-flex items-center gap-2 rounded-full bg-brand-500 px-6 py-3 text-sm font-semibold text-white transition duration-300 hover:-translate-y-1 hover:bg-brand-600">
+                ✈ Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+    </section>
+  </main>
+</body>
+
+</html>
